@@ -29,7 +29,7 @@ def post_new_paste(title, body_text, expiration='N', listed=True):
         "api_paste_private": 0 if listed else 1
     }
     print("Creating new paste ...", end="")
-    resp = requests.post(PASTEBIN_API_POST_URL, params=params)
+    resp = requests.post(PASTEBIN_API_POST_URL, data=params)
 
     if resp.status_code == requests.codes.ok:
         print(" Success!")
