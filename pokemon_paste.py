@@ -52,7 +52,7 @@ def get_paste_data(pokemon_info, poke_name):
     body_text = ""
 
     for ability in pokemon_info["abilities"]:
-        body_text += ability["ability"] + "/n"
+        body_text += '- ' + ability["ability"]["name"] + "\n"
 
     
     return (title, body_text)
